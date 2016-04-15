@@ -1,7 +1,7 @@
 {
-  "name": "uber-library-example",
-  "author": "Joe Goggins <joe@spark.io>",
+  "name": "base64",
+  "author": "egadgetjnr <beaudean.adams@gmail.com>",
   "license": "MIT",
   "version": "0.0.10",
-  "description": "A simple library that illustrates coding conventions of a Spark Library"
+  "description": "Base64 library that has been ported from ESP8266."
 }
