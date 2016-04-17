@@ -22,10 +22,15 @@
  *
  */
 
-#include "Arduino.h"
+ #if defined(ARDUINO)
+ #include "Arduino.h"
+ #elif defined(SPARK)
+ #include "application.h"
+ #endif
+
 extern "C" {
-#include "libb64/cdecode.h"
-#include "libb64/cencode.h"
+#include "cdecode.h"
+#include "cencode.h"
 }
 #include "base64.h"
 
@@ -60,4 +65,3 @@ String base64::encode(uint8_t * data, size_t length) {
 String base64::encode(String text) {
     return base64::encode((uint8_t *) text.c_str(), text.length());
 }
-
